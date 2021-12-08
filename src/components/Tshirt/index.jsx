@@ -4,15 +4,10 @@ import { TextureLoader } from 'three';
 
 const Tshirt = (props) => {
   const { texture, design, part } = props;
-  console.log(
-    '%c 🔊: Tshirt -> design ',
-    'font-size:16px;background-color:#1dbde1;color:white;',
-    design
-  );
 
   const group = useRef();
 
-  const { nodes } = useGLTF('/compressed_t-shirt.glb');
+  const { nodes } = useGLTF('/react_deploy/compressed_t-shirt.glb');
   console.log(
     '%c 🐓: Tshirt -> nodes ',
     'font-size:16px;background-color:#8601cb;color:white;',
@@ -21,8 +16,8 @@ const Tshirt = (props) => {
   );
 
   const { bump, normal } = useTexture({
-    bump: `/bump/${texture.bumpMap}.png`,
-    normal: `/normal/${texture.normalMap}.jpg`,
+    bump: `/react_deploy/bump/${texture.bumpMap}.png`,
+    normal: `/react_deploy/normal/${texture.normalMap}.jpg`,
   });
 
   const base64ToTexture = (base64) => {
