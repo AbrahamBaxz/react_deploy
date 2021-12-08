@@ -1,0 +1,19 @@
+html,
+body,
+#root {
+  width: 100%;
+  height: 95%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background: #c5bcbc; */
+  background: 'black';
+  overflow-y: scroll;
+}
+
+Canvas {
+  width: 100%;
+  height: 100%;
+}
